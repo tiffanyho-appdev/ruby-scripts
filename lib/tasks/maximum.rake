@@ -23,4 +23,16 @@ task :maximum do
   #    - If not, I do nothing and go to the next element.
   #  - After we've looked at every element, what we're left with should be the real maximum
 
+  max = numbers.at(0)
+  
+  numbers.each do |num|
+    if num > max
+      max = num
+    end
+  end
+  
+  ap("Your numbers:")
+  ap(numbers)
+  ap("Maximum: " + max.to_s)  
+
 end

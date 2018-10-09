@@ -23,4 +23,20 @@ task :standard_deviation do
   # To find the standard deviation of a set,
   #  - take the square root of the variance
 
+  mean = numbers.sum / numbers.count
+  sqdiff = []
+  
+  numbers.each do |num|
+    diff = num - mean
+    squared = diff * diff
+    sqdiff.push(squared)
+  end
+  
+  variance = sqdiff.sum / sqdiff.count
+  stdev = variance**0.5
+
+  ap("Your numbers:")
+  ap(numbers)
+  ap("Standard Deviation: " + stdev.to_s)
+
 end

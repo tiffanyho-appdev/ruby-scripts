@@ -13,4 +13,20 @@ task :mode do
   # ====
 
   # To find the mode of a set of numbers, I follow an approach similar to the one for minimum and maximum above.
+  
+  maxcount = 0
+  mode = 0
+  sorted = numbers.sort
+  
+  sorted.each do |num|
+    if sorted.count(num) > maxcount
+      maxcount = numbers.count(num)
+      mode = num
+    end
+  end
+  
+  ap("Your numbers:")
+  ap(sorted)
+  ap("Mode: " + mode.to_s)  
+
 end

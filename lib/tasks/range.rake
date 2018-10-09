@@ -16,4 +16,27 @@ task :range do
   #  - Find the maximum
   #  - Find the minimum
   #  - Subtract the latter from the former
+  
+  max = numbers.at(0)
+  
+  numbers.each do |num|
+    if num > max
+      max = num
+    end
+  end
+  
+  min = numbers.at(0)
+  
+  numbers.each do |num|
+    if num < min
+      min = num
+    end
+  end
+  
+  range = max - min
+  
+  ap("Your numbers:")
+  ap(numbers)
+  ap("Range: " + range.to_s)  
+  
 end

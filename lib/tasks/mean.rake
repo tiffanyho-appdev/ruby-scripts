@@ -16,4 +16,16 @@ task :mean do
   #  - we sum up all the elements
   #  - then we divide the sum by the number of elements in the set
 
+  sum = 0
+  
+  numbers.each do |num|
+    sum = sum + num
+  end
+  
+  mean = sum / numbers.count
+  
+  ap("Your numbers:")
+  ap(numbers)
+  ap("Mean: " + mean.to_s) 
+
 end
